@@ -4,6 +4,6 @@ nav ul {padding-left: 2%}
 nav li {width: auto;}
 nav a {padding: .5rem 1 rem;}
 
-
+main figure {width: 31%;}
 
 } /* end of media query*/
