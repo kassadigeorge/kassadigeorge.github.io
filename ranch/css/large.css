@@ -1,8 +1,8 @@
 @media only screen and (min-width: 1028px) {
-    h1 {color: blue;}
-
-
-
+    
+nav ul {padding-left: 2%}
+nav li {width: auto;}
+nav a {padding: .5rem 1 rem;}
 
 
 
