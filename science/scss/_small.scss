@@ -58,7 +58,12 @@ main{display: block; padding: 1rem $gutter;
  h1 {color: $primaryColor;
     font-weight: $heavyWeight;
 }
-
+picture.hero{
+    display: block;
+    width: 96%;
+    margin: 0;
+}
+picture.hero img, {width: 100%;}
  figure{
     margin: 0;
     width: 100%;
