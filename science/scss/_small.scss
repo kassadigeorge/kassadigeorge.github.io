@@ -13,7 +13,7 @@ body {
 
 header {
     background-color: $primaryColor;
-    padding: 1rem $gutter;
+    padding: .5rem $gutter;
     h1 {
 	margin: 0; 
 	font-size: 1.5rem;
@@ -24,6 +24,10 @@ header {
 	font-size: 1.2rem; 
 	font-weight: $regularWeight;
 } // end of h2
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
     
 } //end of header
 
