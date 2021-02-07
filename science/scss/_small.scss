@@ -51,6 +51,7 @@ main{display: block; padding: 1rem $gutter;
     main figure.myphoto {
         width: 50%;
         margin: 0 0 0 2%;
+        float: right;
     }
     main figure.myphoto img {width: 100%}
     main figure.myphoto figcaption {text-align: center;font-size: .74rem;}
