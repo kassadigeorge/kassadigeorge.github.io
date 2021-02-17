@@ -11,8 +11,8 @@ body {
     font-size: 16px;
 }
 
+div#headerWrapper {background-color: $primaryColor;}
 header {
-    background-color: $primaryColor;
     padding: .5rem $gutter;
     h1 {
 	margin: 0; 
@@ -29,8 +29,8 @@ header figure.logo {
     
 } //end of header
 
-
-nav {background-color: #111;
+div#navWrapper {background-color: #111;}
+nav {
  ul{margin:0; padding: 0;}
  li {list-style-type: none;}
  li.active {background-color: #333}
@@ -72,9 +72,8 @@ picture.hero img, {width: 100%;}
 } // end main
 
 
-
+div#footerWrapper {background-color: $primaryColor;}
 footer {
-    background-color: $primaryColor;
     text-align: center;
     padding: 1rem $gutter;
 }
