@@ -1,0 +1,24 @@
+
+    nav li {width: 25%; float: left;}
+    
+    
+    main figure {
+        float: right; 
+        width: 48%; 
+        margin-left: 2%;
+        padding-bottom: .5rem;
+    }
+
+    header{ 
+        h2{display: block;
+            margin: 0; 
+            font-size: 1.2rem; 
+            font-weight: $regularWeight;}
+    }
+    
+    div.news {
+        clear: both;
+        column-count: 2;
+        column-rule: 1px solid #ddd;
+    }
+    
