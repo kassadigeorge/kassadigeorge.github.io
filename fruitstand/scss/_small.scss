@@ -18,6 +18,8 @@ header {
 	margin: 0; 
 	font-size: 1.5rem;
     font-weight: $heavyWeight;
+    display: grid;
+    grid-template-columns: 130px auto;
 } //end of h1
     h2{
     display: none;
