@@ -9,6 +9,10 @@
         padding-bottom: .5rem;
     }
 
+div.Gallery figure {
+    flex-basis: 29%;
+}
+
     header{
         h1 {font-size: 1.6rem; margin-top: 1rem;}
         h2 {display: block;
@@ -22,4 +26,5 @@
         column-count: 2;
         column-rule: 1px solid #ddd;
     }
-    
+
+

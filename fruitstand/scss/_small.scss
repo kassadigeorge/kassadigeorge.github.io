@@ -74,6 +74,23 @@ picture.hero img, {width: 100%;}
  figcaption {text-align: center; font-size: .8rem;}
 } // end main
 
+/*----- Gallery Flexbox -----*/
+
+div.Gallery {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+div.Gallery figure {
+    flex-basis: 100%;
+    margin: 1rem 2%;
+}
+
+div.Gallery figure img {
+    width: 100%;
+}
+
+
 div.parent {
     display: flex;
     flex-wrap: wrap;
@@ -86,6 +103,10 @@ div.parent figure img{
     width: 100%;
     height: auto;
 }
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
 
 div#footerWrapper {background-color: $primaryColor;}
 footer {
