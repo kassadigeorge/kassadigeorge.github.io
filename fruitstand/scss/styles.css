@@ -407,14 +407,17 @@ body {
   font-size: 16px; }
 
 div#headerWrapper {
-  background-color: #9b9797; }
+  background-color: #79916b; }
 
 header {
-  padding: 0.5rem 2%; }
+  padding: 0.5rem 2%;
+  display: grid;
+  grid-template-columns: 130px auto; }
   header h1 {
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 700; }
+    font-weight: 700;
+    margin-top: .5rem; }
   header h2 {
     display: none; }
   header header figure.logo {
@@ -422,7 +425,7 @@ header {
     margin: 0 2% 0 0; }
 
 div#navWrapper {
-  background-color: #111; }
+  background-color: #324129; }
 
 nav ul {
   margin: 0;
@@ -430,9 +433,10 @@ nav ul {
 nav li {
   list-style-type: none; }
 nav li.active {
-  background-color: #333; }
+  background-color: #3e5133; }
 nav a {
   display: block;
+  background-color: #1a2215;
   padding: .8rem 0;
   /*44px min*/
   color: #eee;
@@ -454,7 +458,7 @@ main {
     text-align: center;
     font-size: .74rem; }
   main h1 {
-    color: #9b9797;
+    color: #79916b;
     font-weight: 700; }
   main picture.hero {
     display: block;
@@ -471,8 +475,33 @@ main {
     text-align: center;
     font-size: .8rem; }
 
+/*----- Gallery Flexbox -----*/
+div.Gallery {
+  display: flex;
+  flex-wrap: wrap; }
+
+div.Gallery figure {
+  flex-basis: 100%;
+  margin: 1rem 2%; }
+
+div.Gallery figure img {
+  width: 100%; }
+
+div.parent {
+  display: flex;
+  flex-wrap: wrap; }
+
+div.parent figure {
+  flex-basis: 50%;
+  margin: 0; }
+
+div.parent figure img {
+  width: 100%;
+  height: auto; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
 div#footerWrapper {
-  background-color: #9b9797; }
+  background-color: #79916b; }
 
 footer {
   text-align: center;
@@ -495,6 +524,12 @@ footer {
     margin-left: 2%;
     padding-bottom: .5rem; }
 
+  div.Gallery figure {
+    flex-basis: 29%; }
+
+  header h1 {
+    font-size: 1.6rem;
+    margin-top: 1rem; }
   header h2 {
     display: block;
     margin: 0;
@@ -508,7 +543,7 @@ footer {
 /* end of media query */
 @media only screen and (min-width: 1028px) {
   header, nav, main, footer {
-    max-width: 1200px;
+    max-width: 1140px;
     margin: auto; }
 
   nav ul {
@@ -526,3 +561,5 @@ footer {
   div.news {
     column-count: 3; } }
 /* end of media query */
+
+/*# sourceMappingURL=styles.css.map */
