@@ -61,10 +61,9 @@ main{
         flex-wrap: wrap;
     }
     div.card {
-        flex-basis: 100%;
         border: 1px solid #999;
         border-radius: $cbr;
-        margin: 1rem 1%;
+        margin: 1rem .5%;
         text-align: center;
         section {
             background-color: #444;
