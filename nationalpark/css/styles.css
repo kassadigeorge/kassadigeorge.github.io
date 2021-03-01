@@ -449,7 +449,7 @@ nav a:hover {
 /*----- MAIN -----*/
 main {
   padding: 0 2%;
-  min-heigh: 10rem; }
+  min-height: 10rem; }
   main div.card-deck {
     display: flex;
     flex-wrap: wrap; }
