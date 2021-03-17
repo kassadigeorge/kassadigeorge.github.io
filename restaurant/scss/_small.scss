@@ -35,7 +35,7 @@ div#navWrapper {background-color: $menuColor;}
 nav {
  ul{margin:0; padding: 0;}
  li {list-style-type: none;}
- li.active {background-color: lighten($menuColor, 5%);}
+ li.active {background-color: lighten($menuColor, 20%);}
  a {
     display: block;
     background-color: darken($menuColor, 10%);
