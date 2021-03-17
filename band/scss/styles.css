@@ -413,7 +413,7 @@ div#headerWrapper {
 
 header {
   padding: 1rem 2%;
-  color: white; }
+  color: black; }
   header h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -426,7 +426,7 @@ header {
 
 /*----- MENU-----*/
 div#navWrapper {
-  background-color: #688ECC; }
+  background-color: #3b3b36; }
 
 nav ul {
   margin: 0;
@@ -434,17 +434,17 @@ nav ul {
 nav li {
   list-style-type: none; }
 nav li.active {
-  background-color: #7b9cd2; }
+  background-color: #484842; }
 nav a {
   display: block;
-  background-color: #4271bf;
+  background-color: #20201e;
   padding: .8rem 0;
   /*44px min*/
   color: #eee;
   text-align: center;
   text-decoration: none; }
 nav a:hover {
-  background-color: #444; }
+  background-color: purple; }
 
 /*----- MAIN -----*/
 main {
@@ -470,13 +470,13 @@ main {
       padding: 1rem 2vw; }
     main div.card a {
       display: block;
-      background-color: #8FC5F4;
+      background-color: #eb25af;
       color: white;
       padding: 1rem 0;
       margin: 1rem 4vw;
       border-radius: 10px; }
     main div.card a:hover {
-      background-color: #61adef; }
+      background-color: #ca1393; }
   main div.card:hover img {
     animation: bounce .75s 1; }
   main img {
@@ -498,7 +498,7 @@ main {
     text-align: center;
     font-size: .74rem; }
   main h1 {
-    color: #8FC5F4;
+    color: #eb25af;
     font-weight: 700; }
   main picture.hero {
     display: block;
@@ -541,7 +541,7 @@ div.parent figure img {
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 div#footerWrapper {
-  background-color: #688ECC; }
+  background-color: #3b3b36; }
 
 footer {
   text-align: center;
@@ -605,5 +605,3 @@ footer {
   div.news {
     column-count: 3; } }
 /* end of media query */
-
-/*# sourceMappingURL=styles.css.map */
