@@ -1,0 +1,189 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+    /*----- HEADER -----*/
+
+div#headerWrapper {
+    background-image: url(../images/header-small.jpg);
+    height: 140px;
+}
+header {
+    padding: 1rem $gutter;
+    color: black;
+    h1 {
+	margin: 0; 
+	font-size: 1.5rem;
+    font-weight: $heavyWeight;
+} //end of h1
+    h2{display: block;
+            margin: 0;
+            font-size: 1.2rem; 
+            font-weight: $regularWeight;
+    } // end of h2
+} //end of header
+
+    /*----- MENU-----*/
+
+div#navWrapper {background-color: $menuColor;}
+nav {
+ ul{margin:0; padding: 0;}
+ li {list-style-type: none;}
+ li.active {background-color: lighten($menuColor, 5%);}
+ a {
+    display: block;
+    background-color: darken($menuColor, 10%);
+    padding: .8rem 0; /*44px min*/
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+} // end of a
+ a:hover {background-color: purple;}
+} // end nav
+
+    /*----- MAIN -----*/
+
+main{ 
+    padding: 0 $gutter;
+    min-height: 10rem;
+    
+    div.card-deck {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.card {
+        border: 1px solid #999;
+        border-radius: $cbr;
+        margin: 1rem .5%;
+        text-align: center;
+        section {
+            background-color: #444;
+            color: #eee;
+            padding: 1rem 0;
+            border-top-left-radius: $cbr - 1;
+            border-top-right-radius: $cbr - 1;
+        } // end of the section
+        img{
+            padding: 1rem;
+        } // end of image
+        p {
+            padding: 1rem 2vw; 
+        }
+        a {
+            display: block;
+            background-color: $secondColor;
+            color: white;
+            padding: 1rem 0;
+            margin: 1rem 4vw;
+            border-radius: $cbr;
+        }
+        a:hover {
+            background-color: darken($secondColor, 10%);
+        }
+    } // end of card
+    div.card:hover img {
+        animation: bounce .75s 1;
+    }
+        img {
+            position: relative;
+        }
+        
+    @keyframes bounce {
+        0% {bottom: 0px}
+        50% {bottom: 20px}
+        100% {bottom: 0px}
+    }
+        main figure.myphoto {
+            width: 50%;
+            margin: 0 0 0 2%;
+            float: right;
+        }
+        main figure.myphoto img {
+            width: 100%
+        }
+        main figure.myphoto figcaption {
+            text-align: center;
+            font-size: .74rem;
+        }
+        h1 {
+            color: $secondColor;
+            font-weight: $heavyWeight;
+        }
+        picture.hero{
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        picture.hero img, {
+            width: 100%;
+        }
+        figure{
+            margin: 0;
+            width: 100%;
+                img {
+                    width: 100%;
+                }
+        } // ends figure
+    
+        figcaption {
+            text-align: center; 
+            font-size: .8rem;
+        }
+} // end main
+
+/*----- Gallery Flexbox -----*/
+
+div.Gallery {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+div.Gallery figure {
+    flex-basis: 100%;
+    margin: 1rem 2%;
+}
+
+div.Gallery figure img {
+    width: 100%;
+}
+
+
+div.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.parent figure {
+    flex-basis: 50%;
+    margin: 0;
+}
+div.parent figure img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+
+div#footerWrapper {background-color: $menuColor;}
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
