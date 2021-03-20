@@ -92,13 +92,22 @@ main{
     div.card:hover img {
         animation: bounce .75s 1;
     }
+        img {
+            position: relative;
+        }
+        
+    @keyframes bounce {
+        0% {bottom: 0px}
+        50% {bottom: 20px}
+        100% {bottom: 0px}
+    }
         figure.myphoto {
-            width: 50%;
+            width: 45%;
             margin: 0 0 0 2%;
             float: right;
         }
         figure.myphoto img {
-            width: 50%
+            width: 100%
         }
         figure.myphoto figcaption {
             text-align: center;
