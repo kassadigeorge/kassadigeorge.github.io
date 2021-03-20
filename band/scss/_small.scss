@@ -14,12 +14,11 @@ body {
     /*----- HEADER -----*/
 
 div#headerWrapper {
-    background-image: url(../images/header-small.jpg);
-    height: 140px;
 }
 header {
     padding: 1rem $gutter;
-    color: black;
+    color: $primaryColor;
+    max-width: 75rem;
     h1 {
 	margin: 0; 
 	font-size: 1.5rem;
@@ -36,9 +35,10 @@ header {
 
 div#navWrapper {background-color: $menuColor;}
 nav {
+    max-width: 75rem;
  ul{margin:0; padding: 0;}
  li {list-style-type: none;}
- li.active {background-color: lighten($menuColor, 5%);}
+ li.active {background-color: lighten($menuColor, 50%);}
  a {
     display: block;
     background-color: darken($menuColor, 10%);
@@ -47,7 +47,7 @@ nav {
     text-align: center;
     text-decoration: none;
 } // end of a
- a:hover {background-color: purple;}
+ a:hover {background-color: $primaryColor;}
 } // end nav
 
     /*----- MAIN -----*/
@@ -61,48 +61,50 @@ main{
         flex-wrap: wrap;
     }
     div.card {
-        border: 1px solid #999;
-        border-radius: $cbr;
         margin: 1rem .5%;
         text-align: center;
         section {
             background-color: #444;
-            color: #eee;
+            color: $primaryColor;
             padding: 1rem 0;
             border-top-left-radius: $cbr - 1;
             border-top-right-radius: $cbr - 1;
         } // end of the section
         img{
             padding: 1rem;
+            position: relative;
         } // end of image
         p {
             padding: 1rem 2vw; 
         }
-        a {
-            display: block;
-            background-color: $secondColor;
-            color: white;
-            padding: 1rem 0;
-            margin: 1rem 4vw;
-            border-radius: $cbr;
-        }
-        a:hover {
-            background-color: darken($secondColor, 10%);
-        }
-    } // end of card
-    div.card:hover img {
-        animation: bounce .75s 1;
     }
-        img {
-            position: relative;
-        }
-        
-    @keyframes bounce {
-        0% {bottom: 0px}
-        50% {bottom: 20px}
-        100% {bottom: 0px}
-    }
-        figure.myphoto {
+    
+    figure.myround img {
+        float: right;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        margin: .5rem;
+    } // end myround
+    figure.myarc img {
+        float: right;
+        shape-outside: circle(100% at 100% 0%);
+        clip-path: circle (100% at 100% 0%);
+        margin: .5rem;
+    } // end myarc
+     figure.mytriangle img {
+        float: left;
+        shape-outside: polygon(0 0,100% 0, 0 100%);
+        clip-path: polygon(0 0,100% 0, 0 100%);
+        margin: .5rem;
+    } // end mytriangle
+    figure.myplay img {
+        float: left;
+        shape-outside: polygon(0 0, 100% 0%, 50% 100%);
+        clip-path: polygon(0 0, 100% 0%, 50% 100%);
+        margin: .5rem;
+    } // end myplay // end of card // end drivers
+       
+    figure.myphoto {
             width: 50%;
             margin: 0 0 0 2%;
             float: right;
