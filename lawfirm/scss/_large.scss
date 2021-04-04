@@ -12,7 +12,27 @@
     
     main figure { width: 31%;}
     
-    div.news {column-count: 3;}
 
 
-  
+ /* ----MAIN---- */
+main {
+    
+    /* ----COLUMNS---- */
+@for $i from 0 through 12 {
+    $w:($i/12)*100%;
+    .large-#{$i} {flex-basis: $w;}
+} // end loop
+
+.jumbotron {
+    p {font-size: 400%;}
+}
+
+
+
+
+
+
+
+    } //end main
+
+div.news {column-count: 3;}
