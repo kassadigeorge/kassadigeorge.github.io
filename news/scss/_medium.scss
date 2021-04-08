@@ -1,9 +1,9 @@
 
     nav li {width: 25%; float: left;}
 nav button {display: none;}
+nav ul.hide {display: block;}
 nav ul li a {
     border: none;
-    border-right: 1px solid rgba (0,0,0,0.3);
     padding: .8rem 1rem;
 }
 
@@ -38,15 +38,21 @@ div.Gallery figure {
 
 main {
     
-    /* ----COLUMNS---- */
-@for $i from 0 through 12 {
-    $w:($i/12)*100%;
-    .medium-#{$i} {flex-basis: $w;}
-} // end loop
+    /*----- GRID -----*/
 
-.jumbotron {
-    p {font-size: 300%;}
-}
-.social { font-size: 4rem;}
+div.newsgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    .mainnewsimage {grid-column: 1/span3;}
+    }// end grid
+    
+    
 
 } //end main
+
+/*----- Footer -----*/
+
+div#footerWrapper {
+
+    footer {div.footerSection {grid-template-columns: 1fr 1fr;}} 
+    
+} // end footer

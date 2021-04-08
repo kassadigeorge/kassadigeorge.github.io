@@ -37,6 +37,7 @@ header figure.logo {
 div#navWrapper {background-color: $menuColor;}
 nav {
  ul{margin:0; padding: 0;
+     .hide {display: none;}
  li {list-style-type: none;
  .active {background-color: lighten($menuColor, 5%);}
  a {
@@ -84,140 +85,58 @@ picture.hero img, {width: 100%;}
     
 } // ends figure
  figcaption {text-align: center; font-size: .8rem;}
+
+
+/*----- GRID -----*/
+
+div.newsgrid {
+    display: grid;
+    margin: 0 2vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
+    span {
+        display: block;
+        text-align: center;
+        font-size: .75rem;
+    }
+    
+    .mainnewsimage, .newsimage {
+        padding: .5rem 2vw;
+        margin: 0;
+        width: 100%;
+    }
+    .mainnewsimage, .newsimage img {width: 100%;}
+    .mainnewsimage {grid-column: 1 / span 2;}
+    
+    }// end grid
+
+    
 } // end main
 
-/*----- COLUMNS -----*/
+/*----- Footer -----*/
 
-div.flexed{
-    display: flex;
-    flex-wrap: wrap;
-} //end parent
-
-div.flexed {display: flex; flex-wrap: wrap;}
-.column {padding: 0 $gutter;}
-@for $i from 0 through 12 {
-    $w:($i/12)*100%;
-    .small-#{$i} {flex-basis: $w;}
-} // end loop
-
-.jumbotron {
-    background-color: $accent;
-    color: white;
-    p {font-size: 200%; padding: 2rem 0;}
-}
-.social {
-    text-align: center;
-    font-size: 2rem;
-    background-color: $accent;
-    a{color: white; display: block; padding: 1rem 0;}
-    a:hover {color: $primaryColor;}
-    
-}
-
-.lawyer {
-    margin: 2rem 5%;
-    text-align: center; 
-    background-color: $secondaryColor;
-    font-size: 15px;
-    width: auto;
-    h3 {
-        margin: 8% 2% 8%;
-    }
-    figure.lawyerimage {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-    }
-    .readon {
-        margin: auto;
-    }
-}
-
-.blog {
-    margin: 2rem 5%;
-    text-align: center; 
-    background-color: $secondaryColor;
-    width: auto;
-    figure.blogimage {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-    }
-}
-
-.tip {
-    margin: 2rem 5%;
-    background-color: $secondaryColor;
-    width: auto;
-}
-
-.faq {
-    margin: 2rem 5%;
-    background-color: $secondaryColor;
-    width: auto;
-}
-
-
-.cta {
-    background-color: $menuColor; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-    font-weight: bold;
-    a{color: white; display: block; padding: 1rem 0;}
-    a:hover {color: $primaryColor;}
-    display: block;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-}
-
-// end columns
-
-/*----- Gallery Flexbox -----*/
-
-div.Gallery {
-    display: flex; 
-    flex-wrap: wrap;
-}
-
-div.Gallery figure {
-    flex-basis: 100%;
-    margin: 1rem 2%;
-}
-
-div.Gallery figure img {
-    width: 100%;
-}
-
-
-div.parent {
-    display: flex;
-    flex-wrap: wrap;
-}
-div.parent figure {
-    flex-basis: 50%;
-    margin: 0;
-}
-div.parent figure img{
-    width: 100%;
-    height: auto;
-}
-
-
-/*----- Clearfix: Force an Element not to collapse -----*/
-
-
-div#footerWrapper {background-color: white;}
+div#footerWrapper {background-color: $primaryColor; padding-top: 1%;
 footer {
+    color: white;
+    div.footerSection {
+       
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+        margin: 0 2rem 0;
+        h3 {margin: 2% 0 0;}
+        ul {margin:0; padding: 0;
+            li {list-style-type: none;}
+        }} // end list
+    
+    p{
     text-align: center;
     padding: 1rem $gutter;
-    color: $primaryColor;
-}
+        }
+    }
+} // end footer
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/

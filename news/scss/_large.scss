@@ -17,22 +17,15 @@
  /* ----MAIN---- */
 main {
     
-    /* ----COLUMNS---- */
-@for $i from 0 through 12 {
-    $w:($i/12)*100%;
-    .large-#{$i} {flex-basis: $w;}
-} // end loop
+   /*----- GRID -----*/
 
-.jumbotron {
-    p {font-size: 400%;}
-}
-    
-    
-
-.lawyer {
-    width: 100%;
-    figure.lawyerimage {width: 100%;}
+div.newsgrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .mainnewsimage {
+        grid-column: 1/span3;
+        grid-row: 1/span2;
     }
+    }// end grid
 
 
 
@@ -40,4 +33,16 @@ main {
 
     } //end main
 
-div.news {column-count: 3;}
+/*----- Footer -----*/
+
+div#footerWrapper {
+
+    footer {div.footerSection {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .mainnewsimage {
+            grid-column: 1/span3;
+            grid-row: 1/span2;
+        }
+        }
+    } 
+} // end footer
