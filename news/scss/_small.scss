@@ -1,0 +1,228 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+div#headerWrapper {background-color: $primaryColor;}
+header {
+    padding: .5rem $gutter;
+    color: white;
+    h1 {
+	margin: 0; 
+	font-size: 1.5rem;
+    font-weight: $heavyWeight;
+    margin-top: 5rem;
+} //end of h1
+    h2{
+    display: none;
+} // end of h2
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
+.topnav {
+  float: right;
+  display: block;
+}   
+} //end of header
+
+div#navWrapper {background-color: $menuColor;}
+nav {
+ ul{margin:0; padding: 0;
+ li {list-style-type: none;
+ .active {background-color: lighten($menuColor, 5%);}
+ a {
+    display: block;
+    background-color: darken($menuColor, 10%);
+    padding: .8rem 0; /*44px min*/
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+} // end of a
+ a:hover {background-color: #444;}
+     } // end li
+} //end ul
+    button {
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: white;
+    }
+} // end nav
+
+
+main{display: block; padding: 1rem $gutter;
+    main figure.myphoto {
+        width: 50%;
+        margin: 0 0 0 2%;
+        float: right;
+    }
+    main figure.myphoto img {width: 100%}
+    main figure.myphoto figcaption {text-align: center;font-size: .74rem;}
+ h1 {color: $primaryColor;
+    font-weight: $heavyWeight;
+}
+picture.hero{
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+picture.hero img, {width: 100%;}
+ figure{
+    margin: 0;
+    width: 100%;
+    img {width: 100%;}
+    
+} // ends figure
+ figcaption {text-align: center; font-size: .8rem;}
+} // end main
+
+/*----- COLUMNS -----*/
+
+div.flexed{
+    display: flex;
+    flex-wrap: wrap;
+} //end parent
+
+div.flexed {display: flex; flex-wrap: wrap;}
+.column {padding: 0 $gutter;}
+@for $i from 0 through 12 {
+    $w:($i/12)*100%;
+    .small-#{$i} {flex-basis: $w;}
+} // end loop
+
+.jumbotron {
+    background-color: $accent;
+    color: white;
+    p {font-size: 200%; padding: 2rem 0;}
+}
+.social {
+    text-align: center;
+    font-size: 2rem;
+    background-color: $accent;
+    a{color: white; display: block; padding: 1rem 0;}
+    a:hover {color: $primaryColor;}
+    
+}
+
+.lawyer {
+    margin: 2rem 5%;
+    text-align: center; 
+    background-color: $secondaryColor;
+    font-size: 15px;
+    width: auto;
+    h3 {
+        margin: 8% 2% 8%;
+    }
+    figure.lawyerimage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .readon {
+        margin: auto;
+    }
+}
+
+.blog {
+    margin: 2rem 5%;
+    text-align: center; 
+    background-color: $secondaryColor;
+    width: auto;
+    figure.blogimage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+}
+
+.tip {
+    margin: 2rem 5%;
+    background-color: $secondaryColor;
+    width: auto;
+}
+
+.faq {
+    margin: 2rem 5%;
+    background-color: $secondaryColor;
+    width: auto;
+}
+
+
+.cta {
+    background-color: $menuColor; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+    font-weight: bold;
+    a{color: white; display: block; padding: 1rem 0;}
+    a:hover {color: $primaryColor;}
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+// end columns
+
+/*----- Gallery Flexbox -----*/
+
+div.Gallery {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+div.Gallery figure {
+    flex-basis: 100%;
+    margin: 1rem 2%;
+}
+
+div.Gallery figure img {
+    width: 100%;
+}
+
+
+div.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.parent figure {
+    flex-basis: 50%;
+    margin: 0;
+}
+div.parent figure img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+
+div#footerWrapper {background-color: white;}
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+    color: $primaryColor;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
