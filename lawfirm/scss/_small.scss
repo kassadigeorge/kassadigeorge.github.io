@@ -102,15 +102,20 @@ div.flexed {display: flex; flex-wrap: wrap;}
     background-color: $accent;
     a{color: white; display: block; padding: 1rem 0;}
     a:hover {color: $primaryColor;}
+    
 }
 
 .lawyer {
     margin: 2rem 5%;
     text-align: center; 
     background-color: $secondaryColor;
-    font-size: 13px;
-    .layerimage {
-        max-width: 100%;
+    font-size: 15px;
+    width: auto;
+    h3 {
+        margin: 8% 2% 8%;
+    }
+    figure.lawyerimage {
+        width: 100%;
         height: auto;
         display: block;
         margin: auto;
@@ -124,16 +129,25 @@ div.flexed {display: flex; flex-wrap: wrap;}
     margin: 2rem 5%;
     text-align: center; 
     background-color: $secondaryColor;
+    width: auto;
+    figure.blogimage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
 }
 
 .tip {
     margin: 2rem 5%;
     background-color: $secondaryColor;
+    width: auto;
 }
 
 .faq {
     margin: 2rem 5%;
     background-color: $secondaryColor;
+    width: auto;
 }
 
 
@@ -145,6 +159,7 @@ div.flexed {display: flex; flex-wrap: wrap;}
   text-align: center;
   text-decoration: none;
   font-size: 18px;
+    font-weight: bold;
     a{color: white; display: block; padding: 1rem 0;}
     a:hover {color: $primaryColor;}
     display: block;
