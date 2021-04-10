@@ -68,28 +68,14 @@ nav ul.hide {display: none;}
 
 
 main{display: block; padding: 1rem $gutter;
-    main figure.myphoto {
-        width: 50%;
-        margin: 0 0 0 2%;
-        float: right;
-    }
-    main figure.myphoto img {width: 100%}
-    main figure.myphoto figcaption {text-align: center;font-size: .74rem;}
- h1 {color: $primaryColor;
-    font-weight: $heavyWeight;
-}
-picture.hero{
-    display: block;
-    width: 100%;
-    margin: 0;
-}
-picture.hero img, {width: 100%;}
+ 
+    h1 {color: $primaryColor;
+    font-weight: $heavyWeight;}
  figure{
     margin: 0;
     width: 100%;
     img {width: 100%;}
-    
-} // ends figure
+    } // ends figure
  figcaption {text-align: center; font-size: .8rem;}
 
 
@@ -107,12 +93,12 @@ div.newsgrid {
         font-size: .75rem;
     }
     
-    .mainnewsimage, .newsimage {
+    .newsimage, .mainnewsimage {
         padding: .5rem 2vw;
         margin: 0;
         width: 100%;
     }
-    .mainnewsimage, .newsimage img {width: 100%;}
+    .mainnewsimage img, .newsimage img {width: 100%;}
     .mainnewsimage {grid-column: 1 / span 2;}
     
     }// end grid

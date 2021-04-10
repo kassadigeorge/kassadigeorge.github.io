@@ -42,7 +42,8 @@ main {
 
 div.newsgrid {
     grid-template-columns: 1fr 1fr 1fr;
-    .mainnewsimage {grid-column: 1/span3;}
+    span{font-size: 1rem;}
+    .mainnewsimage {grid-column: 1/span 3;}
     }// end grid
     
     
