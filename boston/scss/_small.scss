@@ -116,14 +116,8 @@ div.newsgrid {
     .mainnewsimage {grid-column: 1 / span 2;}
     
     }// end grid
-} // end main
-
-/*----- Footer -----*/
-
-div#footerWrapper {background-color: $primaryColor; padding-top: 1%;
-footer {
-    color: white;
-    div.footerSection {
+    
+div.visitSection {
        
         display: grid;
         grid-template-columns: 1fr;
@@ -132,15 +126,20 @@ footer {
         margin: 0 2rem 0;
         h3 {margin: 2% 0 0;}
         ul {margin:0; padding: 0;
-            li {list-style-type: none;}
-        }} // end list
+            li {list-style-type: none;}}
+    } // end main
+}
+
+/*----- Footer -----*/
+
+div#footerWrapper {background-color: $primaryColor;
+footer {color: white;} // end list
     
     p{
     text-align: center;
     padding: 1rem $gutter;
         }
     }
-} // end footer
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/

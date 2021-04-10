@@ -1,0 +1,58 @@
+
+    nav li {width: 25%; float: left;}
+nav button {display: none;}
+nav ul.hide {display: block;}
+nav ul li a {
+    border: none;
+    padding: .8rem 1rem;
+}
+
+    
+    
+    main figure {
+        float: right; 
+        width: 48%; 
+        margin-left: 2%;
+        padding-bottom: .5rem;
+    }
+
+div.Gallery figure {
+    flex-basis: 29%;
+}
+
+    header{
+        h1 {font-size: 1.6rem; margin-top: 1rem;}
+        h2 {display: block;
+            margin: 0; 
+            font-size: 1.2rem; 
+            font-weight: $regularWeight;}
+    }
+    
+    div.news {
+        clear: both;
+        column-count: 2;
+        column-rule: 1px solid #ddd;
+    }
+
+/* ----MAIN---- */
+
+main {
+    
+    /*----- GRID -----*/
+
+div.newsgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    .mainnewsimage {grid-column: 1/span3;}
+    }// end grid
+    
+div.visitSection {grid-template-columns: 1fr 1fr;}
+
+} //end main
+
+/*----- Footer -----*/
+
+div#footerWrapper {
+
+    footer {} 
+    
+} // end footer

@@ -1,0 +1,48 @@
+
+    header, nav, main, footer {
+        max-width: 1140px;
+        margin:auto;
+    }
+    
+    
+    
+    nav ul {padding-left: $gutter;}
+    nav li {width:auto;}
+    nav a {padding: .5rem 1rem;}
+    
+    main figure { width: 31%;}
+    
+
+
+ /* ----MAIN---- */
+main {
+    
+   /*----- GRID -----*/
+
+div.newsgrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .mainnewsimage {
+        grid-column: 1/span3;
+        grid-row: 1/span2;
+    }
+    }// end grid
+
+
+div.visitSection {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .mainnewsimage {
+            grid-column: 1/span3;
+            grid-row: 1/span2;
+        }
+        }
+
+
+    } //end main
+
+/*----- Footer -----*/
+
+div#footerWrapper {
+
+    footer {
+    } 
+} // end footer

@@ -507,28 +507,27 @@ main {
       width: 100%; }
     main div.newsgrid .mainnewsimage {
       grid-column: 1 / span 2; }
+  main div.visitSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 0 2rem 0; }
+    main div.visitSection h3 {
+      margin: 2% 0 0; }
+    main div.visitSection ul {
+      margin: 0;
+      padding: 0; }
+      main div.visitSection ul li {
+        list-style-type: none; }
 
 /*----- Footer -----*/
 div#footerWrapper {
-  background-color: #283747;
-  padding-top: 1%; }
+  background-color: #283747; }
   div#footerWrapper footer {
     color: white; }
-    div#footerWrapper footer div.footerSection {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      margin: 0 2rem 0; }
-      div#footerWrapper footer div.footerSection h3 {
-        margin: 2% 0 0; }
-      div#footerWrapper footer div.footerSection ul {
-        margin: 0;
-        padding: 0; }
-        div#footerWrapper footer div.footerSection ul li {
-          list-style-type: none; }
-    div#footerWrapper footer p {
-      text-align: center;
-      padding: 1rem 2vw; }
+  div#footerWrapper p {
+    text-align: center;
+    padding: 1rem 2vw; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -581,10 +580,10 @@ div#footerWrapper {
       grid-template-columns: 1fr 1fr 1fr; }
       main div.newsgrid .mainnewsimage {
         grid-column: 1/span3; }
+    main div.visitSection {
+      grid-template-columns: 1fr 1fr; }
 
-  /*----- Footer -----*/
-  div#footerWrapper footer div.footerSection {
-    grid-template-columns: 1fr 1fr; } }
+  /*----- Footer -----*/ }
 /* end of media query */
 @media only screen and (min-width: 1028px) {
   header, nav, main, footer {
@@ -611,13 +610,13 @@ div#footerWrapper {
       main div.newsgrid .mainnewsimage {
         grid-column: 1/span3;
         grid-row: 1/span2; }
+    main div.visitSection {
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+      main div.visitSection .mainnewsimage {
+        grid-column: 1/span3;
+        grid-row: 1/span2; }
 
-  /*----- Footer -----*/
-  div#footerWrapper footer div.footerSection {
-    grid-template-columns: 1fr 1fr 1fr 1fr; }
-    div#footerWrapper footer div.footerSection .mainnewsimage {
-      grid-column: 1/span3;
-      grid-row: 1/span2; } }
+  /*----- Footer -----*/ }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */
