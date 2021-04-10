@@ -68,78 +68,77 @@ nav ul.hide {display: none;}
 
 
 main{display: block; padding: 1rem $gutter;
-    main figure.myphoto {
-        width: 50%;
-        margin: 0 0 0 2%;
-        float: right;
-    }
-    main figure.myphoto img {width: 100%}
-    main figure.myphoto figcaption {text-align: center;font-size: .74rem;}
- h1 {color: $primaryColor;
-    font-weight: $heavyWeight;
-}
-picture.hero{
-    display: block;
-    width: 100%;
-    margin: 0;
-}
-picture.hero img, {width: 100%;}
+ 
+    h1 {color: $primaryColor;
+    font-weight: $heavyWeight;}
  figure{
     margin: 0;
     width: 100%;
     img {width: 100%;}
-    
-} // ends figure
+    } // ends figure
  figcaption {text-align: center; font-size: .8rem;}
-
-
-/*----- GRID -----*/
-
-div.newsgrid {
-    display: grid;
-    margin: 0 2vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     
-    span {
-        display: block;
-        text-align: center;
-        font-size: .75rem;
+    div.my_slider {
+    picture {position: relative; width: 100%;}
+    picture div {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        opacity: .8;
+        width: auto;
+        }
+    picture div p {
+        color: white;
+        margin: 2%;
+        }
     }
     
-    .mainnewsimage, .newsimage {
-        padding: .5rem 2vw;
-        margin: 0;
-        width: 100%;
-    }
-    .mainnewsimage, .newsimage img {width: 100%;}
-    .mainnewsimage {grid-column: 1 / span 2;}
-    
-    }// end grid
-    
-div.visitSection {
-       
+div.cards {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        
         margin: 0 2rem 0;
         h3 {margin: 2% 0 0;}
-        ul {margin:0; padding: 0;
-            li {list-style-type: none;}}
-    } // end main
-}
+    
+    div:nth-child(1) {background-image: url("../images/card1.jpg");}
+    div:nth-child(2) {background-image: url("../images/card2.jpg");}
+    div:nth-child(3) {background-image: url("../images/card3.jpg");}
+    div:nth-child(4) {background-image: url("../images/card4.jpg");}
+        div:nth-child(1) a{background-color: $secondaryColor;}
+        div:nth-child(2) a{background-color: $otherColor;}
+        div:nth-child(3) a{background-color: $secondaryColor;}
+        div:nth-child(4) a{background-color: $otherColor;}
+    div a {
+        display: block;
+        width: 100%;
+        height: 350px;
+        text-decoration: none;
+        padding: 0 2%;
+        transition: all .5s ease-in;
+        color: white;
+        text-align: center;
+    }
+    div a.center {}
+    div a:hover {
+        background: none;
+        text-shadow: 0 0 4px black;
+    }
+    } // end cards
+
+}// end main
 
 /*----- Footer -----*/
 
-div#footerWrapper {background-color: $primaryColor;
-footer {color: white;} // end list
+div#footerWrapper {background-color: $primaryColor; padding-top: 1%;
+footer {
+    color: white;
+    } // end list
     
     p{
     text-align: center;
     padding: 1rem $gutter;
         }
-    }
+    } // end footer
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/

@@ -16,10 +16,6 @@ nav ul li a {
         padding-bottom: .5rem;
     }
 
-div.Gallery figure {
-    flex-basis: 29%;
-}
-
     header{
         h1 {font-size: 1.6rem; margin-top: 1rem;}
         h2 {display: block;
@@ -27,25 +23,19 @@ div.Gallery figure {
             font-size: 1.2rem; 
             font-weight: $regularWeight;}
     }
-    
-    div.news {
-        clear: both;
-        column-count: 2;
-        column-rule: 1px solid #ddd;
-    }
+
 
 /* ----MAIN---- */
 
 main {
     
-    /*----- GRID -----*/
-
-div.newsgrid {
-    grid-template-columns: 1fr 1fr 1fr;
-    .mainnewsimage {grid-column: 1/span3;}
-    }// end grid
     
-div.visitSection {grid-template-columns: 1fr 1fr;}
+    div.cards {
+        grid-template-columns: 1fr 1fr;
+    } // end cards
+    
+    
+    
 
 } //end main
 
@@ -53,6 +43,6 @@ div.visitSection {grid-template-columns: 1fr 1fr;}
 
 div#footerWrapper {
 
-    footer {} 
+    footer {div.footerSection {grid-template-columns: 1fr 1fr;}} 
     
 } // end footer
