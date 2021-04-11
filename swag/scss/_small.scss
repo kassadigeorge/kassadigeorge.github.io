@@ -1,0 +1,243 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+div#headerWrapper {background-color: $primaryColor;}
+header {
+    padding: .5rem $gutter;
+    color: white;
+    h1 {
+	margin: 0; 
+	font-size: 1.5rem;
+    font-weight: $heavyWeight;
+    margin-top: 5rem;
+} //end of h1
+    h2{
+    display: none;
+} // end of h2
+.topnav {
+  float: right;
+  display: block;
+}   
+} //end of header
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+header h1 {
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+
+
+/*----- NAV -----*/
+
+div#navWrapper {background-color: $menuColor;}
+nav button {
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: white;
+    }
+nav ul {
+    margin:0; 
+    padding: 0; 
+    list-style-type: none;
+} 
+nav ul li a {
+    display: block;
+    background-color: darken($menuColor, 10%);
+    padding: .8rem 0; /*44px min*/
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li.active a{background-color: lighten($menuColor, 5%);}
+nav ul li a:hover {background-color: #444;}
+nav ul.hide {display: none;}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+#primaryNav {
+    height: 0;
+    overflow: hidden;
+}
+
+#primaryNav.open {
+    height: auto;
+}
+
+#primaryNav li.active > a::after {
+    content: "\25BC";
+    font-size: .75rem;
+    color: rgba(255,255,255,.5);
+    float: right;
+}
+
+#primaryNav li ul {
+    display: none;
+}
+
+#primaryNav li:hover ul {
+    display: block;
+}
+//end of nav
+
+/*----- MAIN -----*/
+
+main{display: block; padding: 1rem $gutter;
+ 
+    h1 {color: $primaryColor;
+    font-weight: $heavyWeight;}
+ figure{
+    margin: 0;
+    width: 100%;
+    img {width: 100%;}
+    } // ends figure
+ figcaption {text-align: center; font-size: .8rem;}
+    
+    div.my_slider {
+    picture {position: relative; width: 100%;}
+    picture div {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        opacity: .8;
+        width: auto;
+        }
+    picture div p {
+        color: white;
+        margin: 2%;
+        }
+    }
+    
+div.cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0 2rem 0;
+        h3 {margin: 2% 0 0;}
+    
+    div:nth-child(1) {background-image: url("../images/card1.jpg");}
+    div:nth-child(2) {background-image: url("../images/card2.jpg");}
+    div:nth-child(3) {background-image: url("../images/card3.jpg");}
+    div:nth-child(4) {background-image: url("../images/card4.jpg");}
+        div:nth-child(1) a{background-color: $secondaryColor;}
+        div:nth-child(2) a{background-color: $otherColor;}
+        div:nth-child(3) a{background-color: $secondaryColor;}
+        div:nth-child(4) a{background-color: $otherColor;}
+    div a {
+        display: block;
+        width: 100%;
+        height: 350px;
+        text-decoration: none;
+        padding: 0 2%;
+        transition: all .5s ease-in;
+        color: white;
+        text-align: center;
+    }
+    div a.center {}
+    div a:hover {
+        background: none;
+        text-shadow: 0 0 4px black;
+    }
+    } // end cards
+
+}// end main
+
+/*----- FORM -----*/
+
+form fieldset {
+    margin: 2rem 0;
+    border: 1px solid $secondaryColor;
+    padding: .5rem 2%;
+}
+
+form legend {
+    color: $otherColor;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: $accent;
+    font-size: .8rem;
+}
+
+form label.top input, form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0,0,0,0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: $accent;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+
+/*----- Footer -----*/
+
+div#footerWrapper {background-color: $primaryColor;
+footer {
+    color: white;
+    } // end list
+    
+    p{
+    text-align: center;
+    padding: 1rem $gutter;
+        }
+    } // end footer
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,41 @@
+
+
+    
+    
+    main figure {
+        float: right; 
+        width: 48%; 
+        margin-left: 2%;
+        padding-bottom: .5rem;
+    }
+
+    header{
+        h1 {font-size: 1.6rem; margin-top: 1rem;}
+        h2 {display: block;
+            margin: 0; 
+            font-size: 1.2rem; 
+            font-weight: $regularWeight;}
+    }
+
+
+/* ----MAIN---- */
+
+main {
+    
+    
+    div.cards {
+        grid-template-columns: 1fr 1fr;
+    } // end cards
+    
+    
+    
+
+} //end main
+
+/*----- Footer -----*/
+
+div#footerWrapper {
+
+    footer {div.footerSection {grid-template-columns: 1fr 1fr;}} 
+    
+} // end footer
