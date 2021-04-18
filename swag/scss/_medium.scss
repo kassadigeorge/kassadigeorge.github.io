@@ -1,4 +1,68 @@
+NAV {
+    
+    background-color: $menuColor;
+    
+    // add space to the left to match the other left side elements DESIGN: Alignment 
+    
+    ul {
+        margin: 0 0 0 2vw;
+        padding: 0;
+    }
+    
+// change to a horizontal menu bar
+    ul>li {
+        float: left;
+        list-style: none;
+    }
+    
+    //style the anchors
+    
+    ul li a {
+        display: block;
+        background: none;
+        font-size: .9em;
+        padding: .9em .9em;
+        color: white;
+        text-decoration: none;
+        /*transition to transition over time on hover*/
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
+    }
+    
+    // on mouse hover darken the menu item
+    ul li a:hover {background: darken($menuColor,5%);}
+    
+    //.active class indicates dropdown by adding a down arrow to the parent list item
+    #primaryNav li.active > a::after {
+    font-size: .75rem;
+    content: "\25BC";
+        color: rgba(255,255,255,.5);
+    }
+    
+    //rules for the sub menu items
+    ul li ul {
+        z-index:998;
+        position: absolute;
+        background-color: darken($menuColor, 3%);
+        left: -999em; /*pushes the menu way off to the side */
+        width: 12em; //width of the sub menu items when the drop down
+    }
+    ul li ul li { /* overides the float and line from the parent ul */
+    float: none;
+    border: none;
+    }
+    
+    // this displays the menus as drop downs
+    ul li:hover ul {
+        left: auto;
+        margin-left: 0;
+    }
+    
+    //darkens the anchor of the current-menuitem
+    li.current-menu-item a{background-color: rgba(0,0,0,0.25);}
 
+
+} // end nav
 
     
     

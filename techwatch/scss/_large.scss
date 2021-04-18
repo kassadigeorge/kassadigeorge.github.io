@@ -1,14 +1,28 @@
 
-    header, nav, main, footer {
-        max-width: 1140px;
-        margin:auto;
+    header, nav, main, footer, div#hamburger {
     }
     
     
-    
+div#pageWrapper {
+grid-template-areas:
+"header"
+"navigation"
+"content"
+"footer";
+grid-template-columns: auto;
+    max-width: 64rem;
+        margin:auto;
+    }
+
+
       /* ------- NAVIGATION ------- */
 
-#hamburgerBtn {display: none;} /* hide the navigation button for all screen widths. we will show it below just for small screens */
+div#navWrapper {
+    nav ul li {
+    flex-basis: auto;
+    a {padding: .6rem 1rem;}
+    }}
+    
 
 
  /* ----MAIN---- */
@@ -25,10 +39,6 @@ div.newsgrid {
         grid-row: 1/span 2;
     }
     }// end grid
-
-div.cards {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    } // end cards
 
 
 

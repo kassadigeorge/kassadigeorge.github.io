@@ -401,6 +401,10 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+div#pageWrapper {
+  display: grid;
+  grid-template-areas: "hamburger" "header" "content" "footer" "navigation"; }
+
 /* body rules */
 body {
   font-family: "Quicksand", sans-serif;
@@ -408,7 +412,8 @@ body {
   font-size: 16px; }
 
 div#headerWrapper {
-  background-color: #52003D; }
+  background-color: #A36014;
+  grid-area: header; }
 
 header {
   padding: 0.5rem 2vw;
@@ -433,186 +438,92 @@ header h1 {
   margin: 0 2% 0 0; }
 
 /*----- NAV -----*/
-div#navWrapper {
-  background-color: #572049; }
+a.myjump {
+  display: block;
+  width: 60px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.7rem;
+  padding: .4rem;
+  text-decoration: none;
+  padding-left: 2%; }
 
-nav button {
-  margin: .2rem 2%;
-  background-color: transparent;
-  border: none;
-  font-size: 1.6rem;
-  color: white; }
+div#navWrapper {
+  background-color: #05A8ED;
+  grid-area: navigation;
+  height: 100vh; }
+
+nav a {
+  display: block;
+  width: auto;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  padding-left: 2%; }
 
 nav ul {
   margin: 0;
   padding: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; }
+
+nav ul li {
+  flex-basis: 100%; }
 
 nav ul li a {
   display: block;
-  background-color: #32122a;
+  background-color: #0485bb;
   padding: .8rem 0;
   /*44px min*/
   color: #eee;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: .9rem; }
 
 nav ul li.active a {
-  background-color: #6a2759; }
+  background-color: #12b5fa; }
 
 nav ul li a:hover {
-  background-color: #444; }
+  background-color: #0496d4; }
 
-nav ul.hide {
-  display: none; }
-
-#hamburgerBtn span:nth-child(1) {
-  display: block; }
-
-#hamburgerBtn span:nth-child(2) {
-  display: none; }
-
-#hamburgerBtn.open span:nth-child(1) {
-  display: none; }
-
-#hamburgerBtn.open span:nth-child(2) {
-  display: block; }
-
-#primaryNav {
-  height: 0;
-  overflow: hidden; }
-
-#primaryNav.open {
-  height: auto; }
-
-#primaryNav li.active > a::after {
-  content: "\25BC";
-  font-size: .75rem;
-  color: rgba(255, 255, 255, 0.5);
-  float: right; }
-
-#primaryNav li ul {
-  display: none; }
-
-#primaryNav li:hover ul {
-  display: block; }
+/*----- HAMBURGER -----*/
+div#hamburger {
+  grid-area: hamburger;
+  background-color: #05A8ED;
+  color: white; }
 
 /*----- MAIN -----*/
 main {
+  grid-area: content;
   display: block;
   padding: 1rem 2vw; }
+  main div#watches {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
   main h1 {
-    color: #52003D;
+    color: #A36014;
+    font-weight: 700; }
+  main h2 {
+    color: #05A8ED;
     font-weight: 700; }
   main figure {
     margin: 0;
     width: 100%; }
     main figure img {
       width: 100%; }
+  main figure.left {
+    float: left;
+    margin: 0 2% 0 0; }
   main figcaption {
     text-align: center;
     font-size: .8rem; }
-  main div.my_slider picture {
-    position: relative;
-    width: 100%; }
-  main div.my_slider picture div {
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    opacity: .8;
-    width: auto; }
-  main div.my_slider picture div p {
-    color: white;
-    margin: 2%; }
-  main div.cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    margin: 0 2rem 0; }
-    main div.cards h3 {
-      margin: 2% 0 0; }
-    main div.cards div:nth-child(1) {
-      background-image: url("../images/card1.jpg"); }
-    main div.cards div:nth-child(2) {
-      background-image: url("../images/card2.jpg"); }
-    main div.cards div:nth-child(3) {
-      background-image: url("../images/card3.jpg"); }
-    main div.cards div:nth-child(4) {
-      background-image: url("../images/card4.jpg"); }
-    main div.cards div:nth-child(1) a {
-      background-color: #D98BC5; }
-    main div.cards div:nth-child(2) a {
-      background-color: #D1009D; }
-    main div.cards div:nth-child(3) a {
-      background-color: #D98BC5; }
-    main div.cards div:nth-child(4) a {
-      background-color: #D1009D; }
-    main div.cards div a {
-      display: block;
-      width: 100%;
-      height: 350px;
-      text-decoration: none;
-      padding: 0 2%;
-      transition: all .5s ease-in;
-      color: white;
-      text-align: center; }
-    main div.cards div a:hover {
-      background: none;
-      text-shadow: 0 0 4px black; }
-
-/*----- FORM -----*/
-form fieldset {
-  margin: 2rem 0;
-  border: 1px solid #D98BC5;
-  padding: .5rem 2%; }
-
-form legend {
-  color: #D1009D;
-  margin: 0 1rem;
-  padding: 0 .5rem; }
-
-form label.top, form div {
-  display: block;
-  padding-top: 1rem;
-  color: #9D0076;
-  font-size: .8rem; }
-
-form label.top input, form label.top select {
-  -webkit-appearance: none;
-  display: block;
-  font-size: 1rem;
-  border: solid 1px #999;
-  border-radius: 4px;
-  padding: .75rem;
-  color: #555;
-  width: 100%;
-  max-width: 20rem;
-  background-color: rgba(0, 0, 0, 0.1); }
-
-form label.sbs {
-  display: block;
-  padding: .75rem 0;
-  color: #555; }
-
-form input.submitBtn {
-  border: none;
-  background-color: #9D0076;
-  color: white;
-  border-radius: 1rem;
-  padding: .75rem 1.5rem;
-  margin: 0 0 2rem 2%;
-  width: 96%;
-  max-width: 20rem; }
-
-form label.top input:required {
-  border-left: red solid 6px; }
-
-form label.top input:required:valid {
-  border-left: green solid 6px; }
 
 /*----- Footer -----*/
 div#footerWrapper {
-  background-color: #52003D; }
+  background-color: #A36014;
+  grid-area: footer; }
   div#footerWrapper footer {
     color: white; }
   div#footerWrapper p {
@@ -829,47 +740,10 @@ div#footerWrapper {
 .slick-arrow.slick-hidden {
   display: none; }
 
-@media only screen and (min-width: 35rem) {
-  NAV {
-    background-color: #572049; }
-    NAV ul {
-      margin: 0 0 0 2vw;
-      padding: 0; }
-    NAV ul > li {
-      float: left;
-      list-style: none; }
-    NAV ul li a {
-      display: block;
-      background: none;
-      font-size: .9em;
-      padding: .9em .9em;
-      color: white;
-      text-decoration: none;
-      /*transition to transition over time on hover*/
-      -webkit-transition: background 0.3s linear;
-      transition: background 0.3s linear; }
-    NAV ul li a:hover {
-      background: #441939; }
-    NAV #primaryNav li.active > a::after {
-      font-size: .75rem;
-      content: "\25BC";
-      color: rgba(255, 255, 255, 0.5); }
-    NAV ul li ul {
-      z-index: 998;
-      position: absolute;
-      background-color: #4c1c40;
-      left: -999em;
-      /*pushes the menu way off to the side */
-      width: 12em; }
-    NAV ul li ul li {
-      /* overides the float and line from the parent ul */
-      float: none;
-      border: none; }
-    NAV ul li:hover ul {
-      left: auto;
-      margin-left: 0; }
-    NAV li.current-menu-item a {
-      background-color: rgba(0, 0, 0, 0.25); }
+@media only screen and (min-width: 560px) {
+  div#pageWrapper {
+    grid-template-areas: "header header" "navigation content" "footer footer";
+    grid-template-columns: 150px auto; }
 
   main figure {
     float: right;
@@ -886,24 +760,34 @@ div#footerWrapper {
     font-size: 1.2rem;
     font-weight: 300; }
 
+  /* ------- NAVIGATION ------- */
+  a.myjump {
+    display: none; }
+
+  div#navWrapper {
+    height: auto; }
+
   /* ----MAIN---- */
-  main div.cards {
+  main div.watches {
     grid-template-columns: 1fr 1fr; }
 
   /*----- Footer -----*/
   div#footerWrapper footer div.footerSection {
     grid-template-columns: 1fr 1fr; } }
 /* end of media query */
-@media only screen and (min-width: 60rem) {
-  header, nav, main, footer {
-    max-width: 1140px;
+@media only screen and (min-width: 1028px) {
+  div#pageWrapper {
+    grid-template-areas: "header" "navigation" "content" "footer";
+    grid-template-columns: auto;
+    max-width: 64rem;
     margin: auto; }
 
   /* ------- NAVIGATION ------- */
-  #hamburgerBtn {
-    display: none; }
+  div#navWrapper nav ul li {
+    flex-basis: auto; }
+    div#navWrapper nav ul li a {
+      padding: .6rem 1rem; }
 
-  /* hide the navigation button for all screen widths. we will show it below just for small screens */
   /* ----MAIN---- */
   main figure {
     width: 31%; }
@@ -915,8 +799,6 @@ div#footerWrapper {
       main div.newsgrid .mainnewsimage {
         grid-column: 1/span 3;
         grid-row: 1/span 2; }
-    main div.cards {
-      grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   form label.sbs {
     padding: .4rem 0; }
