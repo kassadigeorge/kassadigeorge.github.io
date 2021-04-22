@@ -904,6 +904,10 @@ div#footerWrapper {
     display: none; }
 
   /* hide the navigation button for all screen widths. we will show it below just for small screens */
+  #primaryNav {
+    overflow: visible;
+    display: block; }
+
   /* ----MAIN---- */
   main figure {
     width: 31%; }
