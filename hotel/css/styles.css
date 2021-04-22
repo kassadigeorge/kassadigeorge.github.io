@@ -378,20 +378,20 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
-div#inventoryWrapper {
+div#myCards {
   display: grid;
   grid-template-columns: 1fr; }
-  div#inventoryWrapper ion-icon {
+  div#myCards ion-icon {
     float: left;
     font-size: 1.5rem;
     margin: auto; }
-  div#inventoryWrapper figure {
+  div#myCards figure {
     margin: 0;
     width: 100%;
     position: relative; }
-    div#inventoryWrapper figure img {
+    div#myCards figure img {
       width: 100%; }
-    div#inventoryWrapper figure figcaption {
+    div#myCards figure figcaption {
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -408,7 +408,8 @@ div below span p {
 
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #ddd;
+  background-color: white;
+  color: black;
   padding: .5rem 2%;
   text-align: center; }
 
@@ -423,13 +424,13 @@ footer {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
-  main div#inventoryWrapper {
+  main div#myCards {
     grid-template-columns: 1fr 1fr; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
-  header, nav, main, footer {
+  header, main, footer {
     max-width: 64rem;
     margin: auto; }
 

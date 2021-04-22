@@ -68,7 +68,7 @@ main {
     min-height: 10rem;
    } //end main
 
-div#inventoryWrapper {
+div#myCards {
     display: grid;
     grid-template-columns: 1fr;
 
@@ -78,6 +78,7 @@ ion-icon {
     font-size: 1.5rem;
     margin: auto;
 }
+    
 
 figure {
     margin: 0;
@@ -110,7 +111,8 @@ div below span p {
 
 /*----------- FOOTER --------------*/
 footer {
-    background-color: #ddd;
+    background-color: white;
+    color: black;
     padding: .5rem 2%;
     text-align: center;
 }
