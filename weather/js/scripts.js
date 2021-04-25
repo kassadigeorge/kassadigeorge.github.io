@@ -11,27 +11,22 @@
     myweekday[6] = "Saturday";
 
 
-const apiURL = "//api.openweathermap.org/data/2.5/weather?id=5816861&appid=8e456a144c00ce77d62b0d5917246e4a&units=imperial";
+const apiURL = "//api.openweathermap.org/data/2.5/forecast?id=5816861&appid=8e456a144c00ce77d62b0d5917246e4a&units=imperial";
 
 fetch (apiURL)
 .then((response) => response.json())
 .then((weatherInfo) => {
     console.log(weatherInfo);
-    console.log(weatherInfo.name);
+    console.log(weatherInfo.city.name);
     
-    document.getElementById("place").innerHTML = weatherInfo.name;
-    document.getElementById("currentTemp").innerHTML = weatherInfo.main.temp;
+    
     
     let sample = document.createElement("h1");
-    sample.textContent = weatherInfo.name;
+    sample.textContent = weatherInfo.city.name;
     document.getElementById("place").appendChild(sample);
     
-    const iconcode = weatherInfo.weather[0].icon;
-    console.log(iconcode);
-    const icon_path = "//openweathermap.org/img/w/"+ iconcode +".png";
-    console.log(icon_path);
     
-    document.getElementById('weather_icon').src = icon_path;
+    
     
     
     
@@ -44,18 +39,19 @@ fetch (apiURL)
         
         let time = mylist[i].dt_txt;
         if (time.includes('21:00:00')) {
+            console.log("found on entry with 21:00:00 in the time. It was report "+i+" from the mylist of 40");
             
             forecastDayNumber += 1;
-            if (forecastDayNumber===7) {forecastDayNumber = 0;}
+            if (forecastDayNumber===7){forecastDayNumber = 0;}
             
            let theDayName = document.createElement("span");
-            theDayName.textContent = weekday[forecastDayNumber];
-            console.log(">"+weekday[forecastDayNumber]);
+            theDayName.textContent = myweekday[forecastDayNumber];
+            console.log(">"+myweekday[forecastDayNumber]);
             
             let theTemp = document.createElement("p");
-            theTemp.textContent = weatherinfo.list[i].main.temp + "\xB0";
+            theTemp.textContent = weatherInfo.list[i].main.temp + "\xB0";
    
-            let iconcode = weatherinfo.list[i].weather[0].icon;
+            let iconcode = weatherInfo.list[i].weather[0].icon;
             let iconPath = 
                 "//openweathermap.org/img/w/" + iconcode +".png";
             let theIcon = document.createElement("img")

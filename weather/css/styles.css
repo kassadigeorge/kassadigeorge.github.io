@@ -370,6 +370,26 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
+section#weatherforecast {
+  display: grid;
+  grid-template-columns: 1fr; }
+  section#weatherforecast span {
+    background-color: #444;
+    color: #eee;
+    padding: 0 5rem;
+    border-radius: 10px; }
+  section#weatherforecast div {
+    background-color: antiquewhite;
+    border: 2px solid black;
+    margin: 1rem .5%;
+    text-align: center; }
+  section#weatherforecast p {
+    font-size: 2rem; }
+  section#weatherforecast img {
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin: 1rem .5%; }
+
 /*----------- FOOTER --------------*/
 footer {
   background-color: #ddd;
@@ -402,6 +422,9 @@ footer {
     padding: .5rem 1rem; }
 
   /*----------- MAIN --------------*/
+  section#weatherforecast {
+    grid-template-columns: 1fr 1fr 1fr; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
@@ -413,5 +436,10 @@ footer {
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  section#weatherforecast {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
+
+/*# sourceMappingURL=styles.css.map */

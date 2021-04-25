@@ -62,6 +62,20 @@ main {
 section#weatherforecast {
     display: grid;
     grid-template-columns: 1fr;
+    
+    span {background-color: #444;
+            color: #eee;
+            padding: 0 5rem;
+            border-radius: 10px;}
+    div {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        margin: 1rem .5%;
+        text-align: center;}
+    p {font-size: 2rem;}
+    img {border: 1px solid #999;
+        border-radius: 5px;
+        margin: 1rem .5%;}
 }
 
 /*----------- FOOTER --------------*/
