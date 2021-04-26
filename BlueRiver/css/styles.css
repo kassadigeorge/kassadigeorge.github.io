@@ -583,7 +583,6 @@ div.flexed {
 
 .aboutHeader {
   color: gray;
-  background-color: none;
   border-bottom: 1px solid gray; }
   .aboutHeader h2 {
     color: #0480b1; }
@@ -609,8 +608,7 @@ div.flexed {
     border-radius: 30px;
     padding: .5rem 0;
     width: 50%;
-    text-align: center;
-    button-text-align: center; }
+    text-align: center; }
 
 .bottomcolumns {
   margin: 2rem 5%;

@@ -157,7 +157,6 @@ div.flexed {display: flex; flex-wrap: wrap;}
 
 .aboutHeader {
     color: $menuFont;
-    background-color: none;
     border-bottom: 1px solid $menuFont;
     h2 {color: $primaryColor;}
 }
@@ -185,7 +184,6 @@ div.flexed {display: flex; flex-wrap: wrap;}
         padding: .5rem 0;
         width: 50%;
         text-align: center;
-        button: {text-align:  center;}
     }
 }
 
