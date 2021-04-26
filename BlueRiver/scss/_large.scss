@@ -1,0 +1,42 @@
+
+    header, nav, main, footer {
+        max-width: 1140px;
+        margin:auto;
+    }
+    
+    
+    
+    nav ul {padding-left: $gutter;}
+    nav li {width:auto;}
+    nav a {padding: .5rem 1rem;}
+    
+    
+
+
+ /* ----MAIN---- */
+main {
+    
+    /* ----COLUMNS---- */
+@for $i from 0 through 12 {
+    $w:($i/12)*100%;
+    .large-#{$i} {flex-basis: $w;}
+} // end loop
+
+.jumbotron {
+    p {font-size: 400%;}
+}
+    
+    
+
+.lawyer {
+    width: 100%;
+    figure.lawyerimage {width: 100%;}
+    }
+
+
+
+
+
+    } //end main
+
+div.news {column-count: 3;}

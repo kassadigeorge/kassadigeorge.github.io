@@ -1,0 +1,279 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+div#headerWrapper {background-color: $menuColor; }
+header {
+    padding: .5rem $gutter;
+    color: $menuFont;
+    border-bottom: 1px solid $menuFont;
+    h1 {
+	margin: 0; 
+    color: $headerFont;
+	font-size: 1.5rem;
+    font-weight: $heavyWeight;
+    margin-top: 5rem;
+} //end of h1
+    h2{
+        letter-spacing: 7px;
+} // end of h2
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
+.topnav {
+  float: right;
+  display: block;
+}   
+} //end of header
+
+
+/* nav rules */
+
+div#navWrapper {background-color: $menuColor;}
+nav button {
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: white;
+    }
+nav ul {
+    margin:0; 
+    padding: 0; 
+    list-style-type: none;
+} 
+nav ul li a {
+    display: block;
+    padding: .8rem 0; /*44px min*/
+    color: $menuFont;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li.active a{background-color: lighten($menuColor, 5%);}
+nav ul li a:hover {background-color: #444; color: white;}
+nav ul.hide {display: none;}
+header figure.logo {
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+
+
+//end nav
+
+
+/* --- MAIN --- */
+
+
+main{display: block; padding: 1rem 0;
+ h1 {color: $primaryColor;
+    font-weight: $heavyWeight;
+}
+    h2 {padding-left: 1rem;}
+
+ figure{
+    margin: 0;
+    width: 100%;
+    img {width: 100%;}
+    
+} // ends figure
+} // end main
+
+/*----- COLUMNS -----*/
+
+div.flexed{
+    display: flex;
+    flex-wrap: wrap;
+} //end parent
+
+div.flexed {display: flex; flex-wrap: wrap;}
+.column {padding: 0 $gutter;}
+@for $i from 0 through 12 {
+    $w:($i/12)*100%;
+    .small-#{$i} {flex-basis: $w;}
+} // end loop
+
+.jumbotron {
+    width: 100%;
+    display: block;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    padding: 2%;
+    img {width: 100%;}
+}
+
+.social {
+    text-align: center;
+    font-size: 2rem;
+    background-color: $accent;
+    a{color: white; display: block; padding: 1rem 0;}
+    a:hover {color: $primaryColor;}
+    
+}
+
+.lawyer {
+    margin: 2rem 5%;
+    text-align: center; 
+    background-color: $secondaryColor;
+    font-size: 15px;
+    width: auto;
+    h3 {
+        margin: 8% 2% 8%;
+    }
+    figure.lawyerimage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .readon {
+        margin: auto;
+    }
+}
+
+.about {
+    margin: 2rem 5%; 
+    background-color: $secondaryColor;
+    width: auto;
+    h3 {color: $primaryColor;}
+    figure.aboutimage {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+}
+
+.aboutHeader {
+    color: $menuFont;
+    background-color: none;
+    border-bottom: 1px solid $menuFont;
+    h2 {color: $primaryColor;}
+}
+
+.line { border-bottom: 1px solid $menuFont;
+    
+}
+
+.support {
+    margin: 2rem 5%;
+    background-color: $secondaryColor;
+    width: auto;
+    h3 {color: $primaryColor;}
+}
+
+.pricing {
+    margin: 2rem 5%;
+    background-color: white;
+    width: auto;
+    .button {
+        color: white;
+        background-image: linear-gradient($primaryColor, darken($primaryColor, 20%));
+        margin: auto;
+        border-radius: 30px;
+        padding: .5rem 0;
+        width: 50%;
+        text-align: center;
+        button: {text-align:  center;}
+    }
+}
+
+.bottomcolumns {
+    margin: 2rem 5%;
+    background-color: $secondaryColor;
+    width: auto;
+    h3 {color: $primaryColor;}
+}
+
+
+.blacksection {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: black;
+    width: 100%;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 18px;
+    font-weight: bold;
+    a{color: white; display: block; padding: 1rem 0;}
+    a:hover {color: $primaryColor;}
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    .part2 {
+        text-align: right;
+    }
+    .part2 ul {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .part1 p {font-size: 12px;}
+    .part1 ul {font-size: 14px;}
+    h2 {color: $h2Font}
+    h2.success {font-style: italic;}
+}
+
+// end columns
+
+/*----- Gallery Flexbox -----*/
+
+div.Gallery {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+div.Gallery figure {
+    flex-basis: 100%;
+    margin: 1rem 2%;
+}
+
+div.Gallery figure img {
+    width: 100%;
+}
+
+
+div.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.parent figure {
+    flex-basis: 50%;
+    margin: 0;
+}
+div.parent figure img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+
+div#footerWrapper {background-image: linear-gradient($primaryColor, darken($primaryColor, 20%))}
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+    color: white;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

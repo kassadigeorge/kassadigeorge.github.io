@@ -1,0 +1,46 @@
+
+    nav li {width: 25%; margin: .2rem; float: left;}
+nav ul {
+    float: right;}
+   
+
+
+.blacksection{}
+
+    
+
+div.Gallery figure {
+    flex-basis: 29%;
+}
+
+    header{
+        h1 {font-size: 1.6rem; margin-top: 1rem;}
+        h2 {display: block;
+            margin: 0; 
+            font-size: 1.2rem; 
+            font-weight: $regularWeight;}
+    }
+
+/* ----MAIN---- */
+
+main {
+    
+    /* ----COLUMNS---- */
+@for $i from 0 through 12 {
+    $w:($i/12)*100%;
+    .medium-#{$i} {flex-basis: $w;}
+} // end loop
+
+.jumbotron {
+
+}
+
+} //end main
+
+.blacksection {
+    grid-template-columns: 1fr 1fr;}
+    
+/* ----Footer---- */
+
+footer {
+    text-align: left;}
